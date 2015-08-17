@@ -19,7 +19,7 @@ body.appendChild(div);
 var gameBoardStyle = document.getElementById('gameBoard');
 gameBoardStyle.style.background = '#B8B89F';
 gameBoardStyle.style.border = '#FF3B77 1px solid';
-gameBoardStyle.style.width = '600px';
+gameBoardStyle.style.width = '540px';
 gameBoardStyle.style.height = '540px';
 gameBoardStyle.style.padding = '24px';
 gameBoardStyle.style.margin = '0px auto';
@@ -39,6 +39,8 @@ Array.prototype.memory_tile_shuffle = function(){
         this[i] = temp;
     }
 }
+
+//create a new Board
 function newBoard(){
 	cardsFlipped = 0;
 	var output = '';
@@ -49,6 +51,8 @@ function newBoard(){
 	document.getElementById('gameBoard').innerHTML = output;
 }
 newBoard();
+
+//add style to the divs
 function styleDivs() {
 	var div = document.querySelectorAll('div:not(#gameBoard)');
 	for(var i = 0; i < div.length; i++){
@@ -64,6 +68,7 @@ function styleDivs() {
 }
 styleDivs();
 
+//create a score
 var count = 0;
 function updateScore() {
 	count += 1
@@ -71,6 +76,7 @@ function updateScore() {
 	score.innerHTML = count;
 }
 
+// Flip Cards and recognize if its a match
 function memoryFlipTile(tile,val){
 	if(tile.innerHTML == "" && cardValues.length < 2){
 		tile.style.background = '#B6B6B4';
@@ -96,6 +102,8 @@ function memoryFlipTile(tile,val){
 					score.innerHTML = count;
 					document.getElementById('gameBoard').innerHTML = "";
 					newBoard();
+					styleDivs();
+					resetButton();
 				}
 			} else {
 				function flip2Back(){
@@ -116,13 +124,19 @@ function memoryFlipTile(tile,val){
 	}
 }
 
+//create a resetButton that gets a newboard
 function resetButton() {
 	var button = document.createElement('button');
 	button.innerHTML = 'Reset Board'
 	button.addEventListener('click', function() {
+		document.getElementById('gameBoard').innerHTML = '';
 		newBoard();
+		styleDivs();
+		resetButton();
 	})
 	gameBoardStyle.appendChild(button);
 
 }
 resetButton();
+
+
