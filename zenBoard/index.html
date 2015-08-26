@@ -53,13 +53,13 @@
 			children[j].visible = false;
 		}
 	}
-
-	setInterval(idleTimer, 1000);
-
+	// button to clear the board
 	$('#clearBtn').on('click', function() {
 		project.clear();
 	})
 
+	//set a timer for the idle counter.
+	setInterval(idleTimer, 1000);
 	// When the canvas is idle for 45 seconds, clear it.
 	function idleTimer() {
 		idleTime = idleTime + 1;
@@ -80,6 +80,7 @@
 		});
 	}
 
+	// set the timer to clear after 5 minutes.
 	setInterval(clearBoard, 300000);
 
 	</script>
