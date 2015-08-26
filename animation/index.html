@@ -8,14 +8,15 @@
 	<script type="text/javascript" src='../paperjs-v0.9.24/dist/paper-full.js'></script>
 	<script type="text/javascript" src='script.js'></script>
 	<script type='text/paperscript' canvas='myCanvas'>
+		//draw the raindrop bottom
 		var arc = new Path.Arc(new Point(320, 380), new Point(400, 500), new Point(480, 380));
-
+		// draw the raindrop tip
 		var rainTip = new Path();
 		rainTip.add(new Point(320, 380));
 		rainTip.add(new Point(400, 250));
 		rainTip.add(new Point(480, 380))
 		rainTip.closed = true;
-
+		// put them together in a group so it becomes 1 object.
 		var raindrop = new Group ({
 		  children: [arc, rainTip],
 		  position: view.center,
@@ -27,11 +28,12 @@
         destination: (view.center + [30, 50])
 		  }
 		});
-
+		// make raindrop a symbol, that way you can make several
 		var raindrops = new Symbol(raindrop);
 		raindrop.remove();
 		var numOfDrops = 55;
 
+		//create a loop that randomizes 55 drops in size, angle and placement
 		for(var i = 0; i < numOfDrops; i++) {
 		  var firstDrop = raindrops.place();
 		  firstDrop.position = Point.random() * view.size;
