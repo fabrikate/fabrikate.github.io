@@ -1,6 +1,7 @@
 #background {
 	z-index: -50;
 	position: fixed;
+	opacity: 0.4;
 	top: -30%;
   left: -30%;
   width: 200%;
@@ -9,7 +10,6 @@
 
 #background img {
 	position: absolute;
-  opacity: 0.2;
   top: 0;
   left: 0;
   right: 0;
@@ -21,7 +21,8 @@
 
 canvas {
 	z-index: 50;
-	background-color: #DEC9AF;
+	/*background-color: #DEC9AF;*/
+	background-color: #CED0CA;
 	border: solid 2px #5D5646;
 }
 

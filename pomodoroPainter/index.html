@@ -12,6 +12,7 @@
 	// hide the second canvas from view
 	$('.second').hide();
 
+	//mouse down creates a path that creates points, gives it varying colors
 	function onMouseDown(event) {
 		path = new Path();
 		path.fillColor = {
@@ -24,6 +25,7 @@
 		idleTime = 0;
 	}
 
+	//Mouse drag gives the width and angle of the stroke depending on mouse Drag
 	function onMouseDrag(event) {
 		var paintPoints = event.delta / 2;
 		paintPoints.angle += 90;
@@ -86,7 +88,7 @@
 	</script>
 </head>
 <body>
-	<img id='background' src='capeCod.jpg' alt='A view of cape cod beach' />
+	<img id='background' src='http://st.depositphotos.com/1268919/1265/i/950/depositphotos_12650024-Gray-linen-canvas-texture.jpg' alt='A view of cape cod beach' />
 	<section id='buttons'>
 		<h2>Pomodoro Painter</h2>
 		<p>Paint during a pomodoro break, the canvas will clear after 5 minutes. As you paint watch the strokes fade and then disappear.</p>
