@@ -22,31 +22,31 @@
 canvas {
 	z-index: 50;
 	/*background-color: #DEC9AF;*/
-	background-color: #CED0CA;
-	border: solid 2px #5D5646;
+	background-color: #A8A7AA;
+	border: solid 2px #2B2B2D;
 }
 
 canvas {
-	cursor: url(paint_brush.png), pointer;
+	cursor: url(paint_brush.png);
 }
 
-#canvasStn {
-	width: 80%;
-	margin-right: auto;
-	margin-left: auto;
+/*#canvasStn {
+	width: 95%;
+  margin-left: auto;
+  margin-right: auto;
 
-}
+}*/
 
-button {
+/*button {
 	background-color: #8995AB;
 	color: #DEC9AF;
 	font-size: 16px;
-}
+}*/
 
 #buttons {
 	text-align: center;
-	width: 97%;
-	margin-top: 0px;
+	/*width: 97%;
+	margin-top: 0px;*/
 }
 
 p {
