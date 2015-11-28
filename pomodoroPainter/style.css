@@ -21,7 +21,6 @@
 
 canvas {
 	z-index: 50;
-	/*background-color: #DEC9AF;*/
 	background-color: #A8A7AA;
 	border: solid 2px #2B2B2D;
 }
@@ -30,23 +29,22 @@ canvas {
 	cursor: url(paint_brush.png);
 }
 
-/*#canvasStn {
-	width: 95%;
+#canvasStn {
   margin-left: auto;
   margin-right: auto;
 
-}*/
+}
 
-/*button {
-	background-color: #8995AB;
-	color: #DEC9AF;
+button {
+	background-color: #6C6A75;
+	color: #D9D9D9;
 	font-size: 16px;
-}*/
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
 
 #buttons {
 	text-align: center;
-	/*width: 97%;
-	margin-top: 0px;*/
 }
 
 p {
